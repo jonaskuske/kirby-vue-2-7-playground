@@ -65,6 +65,11 @@ use Kirby\Cms\Url;
     window.fiber = json;
   </script>
 
+  <script nonce="<?= $nonce ?>" src="https://unpkg.com/vue@2.7.10/dist/vue.min.js"></script>
+  <script nonce="<?= $nonce ?>">
+    window.panel.Vue2 = window.Vue
+  </script>
+
   <?php foreach ($assets['js'] as $key => $js): ?>
   <?php if ($key === 'index'): ?>
   <script type="module" nonce="<?= $nonce ?>">
