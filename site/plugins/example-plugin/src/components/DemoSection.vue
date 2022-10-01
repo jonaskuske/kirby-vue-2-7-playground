@@ -11,10 +11,16 @@
 export default {
   props: {
     message: String,
+    headlineColor: {
+      type: String,
+      default: "blue",
+    },
   },
 };
 </script>
 
-<style>
-/** Put your CSS here **/
+<style scoped>
+.k-headline {
+  color: v-bind(headlineColor);
+}
 </style>

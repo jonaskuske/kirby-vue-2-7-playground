@@ -6,3 +6,4 @@ sections:
   demo:
     type: demo
     message: A message from Kirby.
+    headlineColor: rebeccapurple
