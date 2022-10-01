@@ -1,0 +1,20 @@
+{
+  "name": "kirby-vue-2-7-playground",
+  "private": true,
+  "version": "1.0.0",
+  "main": "index.php",
+  "scripts": {
+    "start": "php -S localhost:8080 kirby/router.php"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/getkirby/plainkit.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/getkirby/plainkit/issues"
+  },
+  "homepage": "https://github.com/getkirby/plainkit#readme"
+}
