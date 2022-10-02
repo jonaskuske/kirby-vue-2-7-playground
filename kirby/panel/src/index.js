@@ -1,4 +1,5 @@
 import Vue from "vue";
+import VueGlobalMethods from "@/config/VueGlobalMethods.js";
 
 import Api from "./config/api.js";
 import App from "./fiber/app.js";
@@ -17,9 +18,9 @@ import Vuelidate from "vuelidate";
 Vue.config.productionTip = false;
 Vue.config.devtools = true;
 
-Vue.use(Errors);
-Vue.use(Helpers);
-Vue.use(Libraries);
+VueGlobalMethods.use(Errors);
+VueGlobalMethods.use(Helpers);
+VueGlobalMethods.use(Libraries);
 
 // Global styles
 import "./styles/variables.css";
@@ -33,14 +34,14 @@ import "./config/components.js";
 // to increase specificity
 import "./styles/utilities.css";
 
-Vue.use(Plugins);
-Vue.use(Events);
-Vue.use(I18n);
-Vue.use(Fiber);
-Vue.use(Api, store);
+VueGlobalMethods.use(Plugins);
+VueGlobalMethods.use(Events);
+VueGlobalMethods.use(I18n);
+VueGlobalMethods.use(Fiber);
+VueGlobalMethods.use(Api, store);
 
-Vue.use(Portal);
-Vue.use(Vuelidate);
+VueGlobalMethods.use(Portal);
+VueGlobalMethods.use(Vuelidate);
 
 new Vue({
 	store,

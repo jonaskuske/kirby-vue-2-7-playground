@@ -1,11 +1,11 @@
-import Vue from "vue";
+import VueGlobalMethods from "@/config/VueGlobalMethods.js";
 
 // main components
 import Block from "./Block.vue";
 import Blocks from "./Blocks.vue";
 
-Vue.component("k-block", Block);
-Vue.component("k-blocks", Blocks);
+VueGlobalMethods.component("k-block", Block);
+VueGlobalMethods.component("k-blocks", Blocks);
 
 // helper components
 import BlockFigure from "./BlockFigure.vue";
@@ -14,11 +14,11 @@ import BlockSelector from "./BlockSelector.vue";
 import BlockTitle from "./BlockTitle.vue";
 import BlockType from "./BlockType.vue";
 
-Vue.component("k-block-figure", BlockFigure);
-Vue.component("k-block-options", BlockOptions);
-Vue.component("k-block-selector", BlockSelector);
-Vue.component("k-block-title", BlockTitle);
-Vue.component("k-block-type", BlockType);
+VueGlobalMethods.component("k-block-figure", BlockFigure);
+VueGlobalMethods.component("k-block-options", BlockOptions);
+VueGlobalMethods.component("k-block-selector", BlockSelector);
+VueGlobalMethods.component("k-block-title", BlockTitle);
+VueGlobalMethods.component("k-block-type", BlockType);
 
 // block types
 const components = import.meta.glob("./Types/*.vue", { eager: true });
@@ -35,5 +35,5 @@ Object.keys(components).map((key) => {
 	component.extends = BlockType;
 
 	// globally define the block type component
-	Vue.component("k-block-type-" + type, component);
+	VueGlobalMethods.component("k-block-type-" + type, component);
 });

@@ -1,4 +1,4 @@
-import Vue from "vue";
+import VueGlobalMethods from "@/config/VueGlobalMethods.js";
 import Vuex from "vuex";
 
 // store modules
@@ -6,7 +6,7 @@ import content from "./modules/content.js";
 import drawers from "./modules/drawers.js";
 import notification from "./modules/notification.js";
 
-Vue.use(Vuex);
+VueGlobalMethods.use(Vuex);
 
 export default new Vuex.Store({
 	// eslint-disable-next-line

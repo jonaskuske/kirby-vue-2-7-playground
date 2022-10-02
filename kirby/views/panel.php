@@ -68,6 +68,22 @@ use Kirby\Cms\Url;
   <script nonce="<?= $nonce ?>" src="https://unpkg.com/vue@2.7.10/dist/vue.min.js"></script>
   <script nonce="<?= $nonce ?>">
     window.panel.Vue2 = window.Vue
+
+    let restrictedMethods = ['use', 'mixin', 'component', 'filter', 'directive']
+
+    for (const method of restrictedMethods) {
+      const originalMethod = window.panel.Vue2[method]
+
+      window.panel.Vue2[method] = function () {
+        if (window.panel._isPanelCall !== true) {
+          throw new Error(
+            `Kirby plugins must not use global Vue methods, like Vue.${method}.`
+          )
+        }
+
+        originalMethod.apply(window.panel.Vue2, arguments)
+      }
+    }
   </script>
 
   <?php foreach ($assets['js'] as $key => $js): ?>

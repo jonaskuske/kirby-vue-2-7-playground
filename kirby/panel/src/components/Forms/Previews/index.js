@@ -1,4 +1,4 @@
-import Vue from "vue";
+import VueGlobalMethods from "@/config/VueGlobalMethods.js";
 
 /* Form Field Previews */
 import ArrayFieldPreview from "./ArrayFieldPreview.vue";
@@ -16,28 +16,28 @@ import ToggleFieldPreview from "./ToggleFieldPreview.vue";
 import UrlFieldPreview from "./UrlFieldPreview.vue";
 import UsersFieldPreview from "./UsersFieldPreview.vue";
 
-Vue.component("k-array-field-preview", ArrayFieldPreview);
-Vue.component("k-bubbles-field-preview", BubblesFieldPreview);
-Vue.component("k-date-field-preview", DateFieldPreview);
-Vue.component("k-email-field-preview", EmailFieldPreview);
-Vue.component("k-files-field-preview", FilesFieldPreview);
-Vue.component("k-flag-field-preview", FlagFieldPreview);
-Vue.component("k-html-field-preview", HtmlFieldPreview);
-Vue.component("k-image-field-preview", ImageFieldPreview);
-Vue.component("k-pages-field-preview", PagesFieldPreview);
-Vue.component("k-text-field-preview", TextFieldPreview);
-Vue.component("k-toggle-field-preview", ToggleFieldPreview);
-Vue.component("k-time-field-preview", TimeFieldPreview);
-Vue.component("k-url-field-preview", UrlFieldPreview);
-Vue.component("k-users-field-preview", UsersFieldPreview);
+VueGlobalMethods.component("k-array-field-preview", ArrayFieldPreview);
+VueGlobalMethods.component("k-bubbles-field-preview", BubblesFieldPreview);
+VueGlobalMethods.component("k-date-field-preview", DateFieldPreview);
+VueGlobalMethods.component("k-email-field-preview", EmailFieldPreview);
+VueGlobalMethods.component("k-files-field-preview", FilesFieldPreview);
+VueGlobalMethods.component("k-flag-field-preview", FlagFieldPreview);
+VueGlobalMethods.component("k-html-field-preview", HtmlFieldPreview);
+VueGlobalMethods.component("k-image-field-preview", ImageFieldPreview);
+VueGlobalMethods.component("k-pages-field-preview", PagesFieldPreview);
+VueGlobalMethods.component("k-text-field-preview", TextFieldPreview);
+VueGlobalMethods.component("k-toggle-field-preview", ToggleFieldPreview);
+VueGlobalMethods.component("k-time-field-preview", TimeFieldPreview);
+VueGlobalMethods.component("k-url-field-preview", UrlFieldPreview);
+VueGlobalMethods.component("k-users-field-preview", UsersFieldPreview);
 
 /** Extensions **/
-Vue.component("k-list-field-preview", HtmlFieldPreview);
-Vue.component("k-writer-field-preview", HtmlFieldPreview);
+VueGlobalMethods.component("k-list-field-preview", HtmlFieldPreview);
+VueGlobalMethods.component("k-writer-field-preview", HtmlFieldPreview);
 
-Vue.component("k-checkboxes-field-preview", BubblesFieldPreview);
-Vue.component("k-multiselect-field-preview", BubblesFieldPreview);
-Vue.component("k-radio-field-preview", BubblesFieldPreview);
-Vue.component("k-select-field-preview", BubblesFieldPreview);
-Vue.component("k-tags-field-preview", BubblesFieldPreview);
-Vue.component("k-toggles-field-preview", BubblesFieldPreview);
+VueGlobalMethods.component("k-checkboxes-field-preview", BubblesFieldPreview);
+VueGlobalMethods.component("k-multiselect-field-preview", BubblesFieldPreview);
+VueGlobalMethods.component("k-radio-field-preview", BubblesFieldPreview);
+VueGlobalMethods.component("k-select-field-preview", BubblesFieldPreview);
+VueGlobalMethods.component("k-tags-field-preview", BubblesFieldPreview);
+VueGlobalMethods.component("k-toggles-field-preview", BubblesFieldPreview);
