@@ -3,6 +3,7 @@ import fs from "fs";
 import path from "path";
 import { defineConfig, splitVendorChunkPlugin } from "vite";
 import vue from "@vitejs/plugin-vue2";
+import externalGlobals from "rollup-plugin-external-globals";
 import postcssAutoprefixer from "autoprefixer";
 import postcssCsso from "postcss-csso";
 import postcssDirPseudoClass from "postcss-dir-pseudo-class";
@@ -45,7 +46,11 @@ export default defineConfig(({ command }) => {
 	};
 
 	return {
-		plugins: [vue(), splitVendorChunkPlugin()],
+		plugins: [
+			vue(),
+			splitVendorChunkPlugin(),
+			externalGlobals({ vue: "window.panel.Vue2" })
+		],
 		define: {
 			// Fix vuelidate error
 			"process.env.BUILD": JSON.stringify("production")
